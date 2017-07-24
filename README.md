@@ -22,8 +22,8 @@
 
 ## 1. Naming conventions
 
-  <a name="naming-conventions-branches"></a><a name="1.1"></a>
-  - [1.1](#naming-conventions-branches) **Naming Conventions: Branches**: You should always create branch from the JIRA ticket (create branch link). It should follow this convention:
+  <a name="naming-conventions--branches"></a><a name="1.1"></a>
+  - [1.1](#naming-conventions--branches) **Naming Conventions: Branches**: You should always create branch from the JIRA ticket (create branch link). It should follow this convention:
 
     `type/JIRA-Ticket-branch-name`
 
@@ -43,8 +43,8 @@
 
     > Why? We have all important informations about feature in the branch name. It will be usefull when we will be switching between branches.
 
-  <a name="naming-conventions-commits"></a><a name="1.2"></a>
-  - [1.2](#naming-conventions-commits)  **Naming Conventions: Commits**: Commits messages should follow this convention:
+  <a name="naming-conventions--commits"></a><a name="1.2"></a>
+  - [1.2](#naming-conventions--commits)  **Naming Conventions: Commits**: Commits messages should follow this convention:
 
     `JIRA-Ticket: commit message`
 
@@ -68,40 +68,40 @@
 
 ## 2. Pull Requests
 
-  <a name="pull-request-title"></a><a name="2.1"></a>
-  - [2.1](#pull-request-title) **Pull Requests: Title**: The title should describe in few words what PR is about, JIRA ticket should be at the beginning, if there is only one commit, then it can be the same as commit message.
+  <a name="pull-request--title"></a><a name="2.1"></a>
+  - [2.1](#pull-request--title) **Pull Requests: Title**: The title should describe in few words what PR is about, JIRA ticket should be at the beginning, if there is only one commit, then it can be the same as commit message.
     `BB-123: Implement comments component`
 
     > Why? It tells every one what this commit is about before openning PR.
 
-  <a name="pull-request-description"></a><a name="2.2"></a>
-  - [2.2](#pull-request-description) **Pull Requests: Description**: It should describe what PR is about in more detailed version than title. It can contain JIRA tickets, mentions, links, resources. The more, the better. Remember that PR is connected with JIRA ticket by integrations, so it can be found in the future.
+  <a name="pull-request--description"></a><a name="2.2"></a>
+  - [2.2](#pull-request--description) **Pull Requests: Description**: It should describe what PR is about in more detailed version than title. It can contain JIRA tickets, mentions, links, resources. The more, the better. Remember that PR is connected with JIRA ticket by integrations, so it can be found in the future.
 
     > Why? It tells in detailed way what the PR is about to the reviewer. Also it will be stored, so it will be useful when someone will be looking for code history.
 
 
-  <a name="pull-request-merging"></a><a name="2.3"></a>
-  - [2.3](#pull-request-merging) **Pull Requests: Merging**: You can merge your PR if you have at least two approvals and at least one from the developer who is working in the project.
+  <a name="pull-request--merging"></a><a name="2.3"></a>
+  - [2.3](#pull-request--merging) **Pull Requests: Merging**: You can merge your PR if you have at least two approvals and at least one from the developer who is working in the project (it concerns projects where at least two developers are available).
 
     > Why? You can make some mistakes and developer who is not in the project can't see/know everything about the project. Internal developer is more familiar with the entire project, so it will be easier find any mistakes.
 
-  <a name="pull-request-destination"></a><a name="2.4"></a>
-  - [2.4](#pull-request-destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to checking.
+  <a name="pull-request--destination"></a><a name="2.4"></a>
+  - [2.4](#pull-request--destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to checking.
 
     > Why? You should create big PRs. The more code reviewer ahs to check, the more mistakes he/she can skip. Also there should'nt be unfinished functionality in the main branch.
 
-  <a name="pull-request-reviewers"></a><a name="2.5"></a>
-  - [2.5](#pull-request-reviewers) **Pull Requests: Reviewers**: Add all possible developers as reviewers. The more, the better.
+  <a name="pull-request--reviewers"></a><a name="2.5"></a>
+  - [2.5](#pull-request--reviewers) **Pull Requests: Reviewers**: Add all possible developers as reviewers. The more, the better.
 
     > Why? Thay will find more issues.
 
-  <a name="pull-request-commits"></a><a name="2.6"></a>
-  - [2.6](#pull-request-commits) **Pull Requests: Commits**: There should be one commit for one JIRA ticket in the PR, if commit is related to more than one ticket, then it can contain more JIRA tickets. You can't create more than one commit for one JIRA ticket in one PR.
+  <a name="pull-request--commits"></a><a name="2.6"></a>
+  - [2.6](#pull-request--commits) **Pull Requests: Commits**: There should be one commit for one JIRA ticket in the PR, if commit is related to more than one ticket, then it can contain more JIRA tickets. You can't create more than one commit for one JIRA ticket in one PR.
 
     > Why? Beacuse reviewers should also check commit message if it fits requirements. And for managing application it is easier to have one commit per JIRA ticket.
 
-  <a name="pull-request-strategy"></a><a name="2.7"></a>
-  - [2.7](#pull-request-strategy) **Pull Requests: Merging strategy**: Always use squash strategy for PRs which destination is workspace branch. NEVER use squash strategy for release branches. Use following convention:
+  <a name="pull-request--strategy"></a><a name="2.7"></a>
+  - [2.7](#pull-request--strategy) **Pull Requests: Merging strategy**: Always use squash strategy for PRs which destination is workspace branch. NEVER use squash strategy for release branches. Use following convention:
 
     `type/JIRA-Ticket: commit message (pull request #PRNumber)`
 
@@ -115,8 +115,8 @@
 
 ## 3. Update Pull Requests
 
-  <a name="update-pull-request-commit-message"></a><a name="3.1"></a>
-  - [3.1](#update-pull-request-commit-message) **Update Pull Requests: Commit message**: use git ammend if you want to update only commit message
+  <a name="update-pull-request--commit-message"></a><a name="3.1"></a>
+  - [3.1](#update-pull-request--commit-message) **Update Pull Requests: Commit message**: use git reset if you want to update only commit message
 
     ```
     git reset --soft HEAD~1
@@ -131,8 +131,8 @@
     git push -f
     ```
 
-  <a name="update-pull-request-strategy"></a><a name="3.2"></a>
-  - [3.2](#update-pull-request-strategy) **Update Pull Requests: Strategy**: Use one of the following strategies if you want to update code in the PR:
+  <a name="update-pull-request--strategy"></a><a name="3.2"></a>
+  - [3.2](#update-pull-request--strategy) **Update Pull Requests: Strategy**: Use one of the following strategies if you want to update code in the PR:
 
     ```
     git reset --soft HEAD~1
@@ -154,8 +154,8 @@
 
 ## 4. Pull Request Review
 
-  <a name="pull-request-review-what-to-check"></a><a name="4.1"></a>
-  - [4.1](#pull-request-review-what-to-check) **Pull Request Review: What to check**:
+  <a name="pull-request-review--what-to-check"></a><a name="4.1"></a>
+  - [4.1](#pull-request-review--what-to-check) **Pull Request Review: What to check**:
 
   + PR title and description
   + commit message
@@ -163,16 +163,16 @@
   + as a internal developer, check if code fits in the application from the glboal perspective
   + check if all dependencies are needed (maybe it can be done in the easier way)
 
-  <a name="pull-request-review-how-to-write-comments"></a><a name="4.2"></a>
-  - [4.2](#pull-request-review-how-to-write-comments) **Pull Request Review: How to write comments**:
+  <a name="pull-request-review--how-to-write-comments"></a><a name="4.2"></a>
+  - [4.2](#pull-request-review--how-to-write-comments) **Pull Request Review: How to write comments**:
 
   + comment code, not a person
   + attach links to the style-guide, to remind about rules
   + attach links to sites, where you found solution
   + create tasks for issues that should be fixed before merging
 
-  <a name="pull-request-review-how-to-read-comments"></a><a name="4.3"></a>
-  - [4.3](#pull-request-review-how-to-read-comments) **Pull Request Review: How to read comments**:
+  <a name="pull-request-review--how-to-read-comments"></a><a name="4.3"></a>
+  - [4.3](#pull-request-review--how-to-read-comments) **Pull Request Review: How to read comments**:
 
   + 'can' keyword means that you can implemented but it's not necessary
   + 'should' keyword means that you should implemented
@@ -181,8 +181,8 @@
 
 ## 5. Pull changes from the server
 
-  <a name="pull-changes-rebase"></a><a name="5.1"></a>
-  - [5.1](#pull-changes-rebase) **Pull changes from the server: Reabse**:
+  <a name="pull-changes--rebase"></a><a name="5.1"></a>
+  - [5.1](#pull-changes--rebase) **Pull changes from the server: Rebase**:
 
   Always use rebase flag when you want to pull changes from the remove branch. All PRs with merge commits will be declined.
 
