@@ -8,19 +8,19 @@
   1. [Pull Request Review](#pull-request-review)
   1. [Pull changes from the server](#pull-changes)
   1. [Main Branches](#main-branches)
+  1. [Reset](#reset)
+  1. [Reflog](#reflog)
 
   WIP:
   1. [Work on the same branch](#work-same-branch)
   1. [Revert commits](#revert-commits)
-  1. [Reflog](#reflog)
   1. [Rebase](#rebase)
   1. [Releases](#releases)
-  1. [Reset](#reset)
   1. [Stash](#stash)
   1. [Cherry Pick](#cherry-pick)
 
 
-## 1. Naming conventions
+## Naming conventions
 
   <a name="naming-conventions--branches"></a><a name="1.1"></a>
   - [1.1](#naming-conventions--branches) **Naming Conventions: Branches**: You should always create branch from the JIRA ticket (create branch link). It should follow this convention:
@@ -66,7 +66,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## 2. Pull Requests
+## Pull Requests
 
   <a name="pull-request--title"></a><a name="2.1"></a>
   - [2.1](#pull-request--title) **Pull Requests: Title**: The title should describe in few words what PR is about, JIRA ticket should be at the beginning, if there is only one commit, then it can be the same as commit message.
@@ -93,7 +93,7 @@
   <a name="pull-request--reviewers"></a><a name="2.5"></a>
   - [2.5](#pull-request--reviewers) **Pull Requests: Reviewers**: Add all possible developers as reviewers. The more, the better.
 
-    > Why? Thay will find more issues.
+    > Why? They will find more issues.
 
   <a name="pull-request--commits"></a><a name="2.6"></a>
   - [2.6](#pull-request--commits) **Pull Requests: Commits**: There should be one commit for one JIRA ticket in the PR, if commit is related to more than one ticket, then it can contain more JIRA tickets. You can't create more than one commit for one JIRA ticket in one PR.
@@ -113,7 +113,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## 3. Update Pull Requests
+## Update Pull Requests
 
   <a name="update-pull-request--commit-message"></a><a name="3.1"></a>
   - [3.1](#update-pull-request--commit-message) **Update Pull Requests: Commit message**: use git reset if you want to update only commit message
@@ -152,7 +152,7 @@
 
 **[⬆ back to top](#table-of-contents)**
 
-## 4. Pull Request Review
+## Pull Request Review
 
   <a name="pull-request-review--what-to-check"></a><a name="4.1"></a>
   - [4.1](#pull-request-review--what-to-check) **Pull Request Review: What to check**:
@@ -174,12 +174,12 @@
   <a name="pull-request-review--how-to-read-comments"></a><a name="4.3"></a>
   - [4.3](#pull-request-review--how-to-read-comments) **Pull Request Review: How to read comments**:
 
-  + 'can' keyword means that you can implemented but it's not necessary
-  + 'should' keyword means that you should implemented
+  + 'can' keyword means that you can implement but it's not necessary
+  + 'should' keyword means that you should implement, it's necessary
 
 **[⬆ back to top](#table-of-contents)**
 
-## 5. Pull changes from the server
+## Pull changes from the server
 
   <a name="pull-changes--rebase"></a><a name="5.1"></a>
   - [5.1](#pull-changes--rebase) **Pull changes from the server: Rebase**:
@@ -190,11 +190,11 @@
 
   > Why? To not include merge commits, which are hard to maintain.
 
-  > Hint: Before pull, make one commit with you changes or stash them
+  > Hint: Before pull, make one commit with your changes or stash them
 
 **[⬆ back to top](#table-of-contents)**
 
-## 6. Main branches
+## Main branches
 
   <a name="main-branches"></a><a name="6.1"></a>
   - [6.1](#main-branches) **Main branches** which should be in every project
@@ -204,6 +204,53 @@
   * **staging** - main branch for testing, there should be merged every minor and major release (x.x.0) and hotfixes, from there we should create patch releases (1.2.x), history shouldn't be modified
 
   * **master** - main branch for production, there should be only releases from staging or very urgent hotfixes, history can be modified (to revert changes), it shouldn't be used for developing
+
+
+**[⬆ back to top](#table-of-contents)**
+
+
+## Reset
+
+  <a name="reset"></a><a name="7.1"></a>
+  - [7.1](#main-branches) **Git Reset:** Reset current HEAD to the specified state [docs](https://git-scm.com/docs/git-reset)
+
+  **Where you can reset:**
+
+  * **HEAD~number** - number is the number of commits which you want to reset
+
+    `git reset HEAD~2` means that you want to reset last two commits
+
+  * **id** - means that you want to reset to a specific commit (or commit from `reflog`)
+
+    `git reset 1234` means that you want to reset to `1234` commit
+
+
+  **Flags:**
+
+  * **--soft** - Does not touch the index file or the working tree at all (but resets the head to <commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it. (Green files in the `git status` output)
+
+  * **--mixed** - Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action. (Red files in the `git status` output)
+
+  * **--hard** - Resets the index and working tree. Any changes to tracked files in the working tree since <commit> are discarded. (files are removed from disc)
+
+
+**[⬆ back to top](#table-of-contents)**
+
+## Reflog
+
+  <a name="reset"></a><a name="8.1"></a>
+  - [8.1](#main-branches) **Git Reflog:** Shows history of all your git actions. [docs](https://git-scm.com/docs/git-reflog)
+
+  **What you can do?:**
+
+  You can reset to the specific point in the history. For example you made a mistake with git pull:
+
+  ```
+  git reflog (copy id of the commit)
+  git reset commitId
+  ```
+
+  You can use `--hard` flag to remove all the files from disc.
 
 
 **[⬆ back to top](#table-of-contents)**
