@@ -88,7 +88,7 @@
   <a name="pull-request--destination"></a><a name="2.4"></a>
   - [2.4](#pull-request--destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to checking.
 
-    > Why? You should create big PRs. The more code reviewer ahs to check, the more mistakes he/she can skip. Also there should'nt be unfinished functionality in the main branch.
+    > Why? You shouldn't create big PRs. The more code reviewer has to check, the more mistakes he/she can skip. Also there shouldn't be unfinished functionality in the main branch.
 
   <a name="pull-request--reviewers"></a><a name="2.5"></a>
   - [2.5](#pull-request--reviewers) **Pull Requests: Reviewers**: Add all possible developers as reviewers. The more, the better.
