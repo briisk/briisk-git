@@ -230,7 +230,7 @@
 
   **Flags:**
 
-  * **--soft** - Does not touch the index file or the working tree at all (but resets the head to <commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it. (Green files in the `git status` output)
+  * **--soft** - Does not touch the index file or the working tree at all (but resets the head to `<commit>`, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it. (Green files in the `git status` output)
 
   * **--mixed** - Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action. (Red files in the `git status` output)
 
