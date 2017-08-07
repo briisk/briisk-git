@@ -249,7 +249,8 @@
   You can reset to the specific point in the history. For example you made a mistake with git pull:
 
   ```
-  git reflog (copy id of the commit)
+  git reflog
+  // copy id of the commit from the output
   git reset commitId
   ```
 
