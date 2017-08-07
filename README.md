@@ -86,7 +86,7 @@
     > Why? You can make some mistakes and developer who is not in the project can't see/know everything about the project. Internal developer is more familiar with the entire project, so it will be easier find any mistakes.
 
   <a name="pull-request--destination"></a><a name="2.4"></a>
-  - [2.4](#pull-request--destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to checking.
+  - [2.4](#pull-request--destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to check.
 
     > Why? You shouldn't create big PRs. The more code reviewer has to check, the more mistakes he/she can skip. Also there shouldn't be unfinished functionality in the main branch.
 
