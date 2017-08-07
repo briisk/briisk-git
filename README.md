@@ -202,11 +202,11 @@
   <a name="main-branches"></a><a name="6.1"></a>
   - [6.1](#main-branches) **Main branches** which should be in every project
 
-  * **workspace** - main branch for developing, there should be merged every new feature/bugfix, from there we should create minor and major releases (x.x.0), history shouldn't be modified
+  * **workspace** - main branch for developing, you should merge every new feature/bugfix here, from here we should create minor and major releases (x.x.0), history shouldn't be modified
 
-  * **staging** - main branch for testing, there should be merged every minor and major release (x.x.0) and hotfixes, from there we should create patch releases (1.2.x), history shouldn't be modified
+  * **staging** - main branch for testing, you should merge every minor and major release (x.x.0) and hotfixes here, from here we should create patch releases (1.2.x), history shouldn't be modified
 
-  * **master** - main branch for production, there should be only releases from staging or very urgent hotfixes, history can be modified (to revert changes), it shouldn't be used for developing
+  * **master** - main branch for production, you should merge only releases from staging or very urgent hotfixes here, history can be modified (to revert changes), it shouldn't be used for developing
 
 
 **[⬆ back to top](#table-of-contents)**
