@@ -192,6 +192,8 @@
   > Why? To not include merge commits, which are hard to maintain.
 
   > Hint: Before pull, make one commit with your changes or stash them
+  
+  > Hint: set rebase as default pull strategy: `git config --global pull.rebase true`
 
 **[⬆ back to top](#table-of-contents)**
 
