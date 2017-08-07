@@ -170,7 +170,7 @@
   + comment code, not a person
   + attach links to the style-guide, to remind about rules
   + attach links to sites, where you found solution
-  + create tasks for issues that should be fixed before merging
+  + create tasks/request cheanges for issues that should be fixed before merging
 
   <a name="pull-request-review--how-to-read-comments"></a><a name="4.3"></a>
   - [4.3](#pull-request-review--how-to-read-comments) **Pull Request Review: How to read comments**:
