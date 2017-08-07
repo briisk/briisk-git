@@ -83,7 +83,7 @@
   <a name="pull-request--merging"></a><a name="2.3"></a>
   - [2.3](#pull-request--merging) **Pull Requests: Merging**: You can merge your PR if you have at least two approvals and at least one from the developer who is working in the project (it concerns projects where at least two developers are available).
 
-    > Why? You can make some mistakes and developer who is not in the project can't see/know everything about the project. Internal developer is more familiar with the entire project, so it will be easier find any mistakes.
+    > Why? You can make some mistakes and developer who is not in the project can't see/know everything about the project. Internal developer is more familiar with the entire project, so it will be easier to find any mistakes.
 
   <a name="pull-request--destination"></a><a name="2.4"></a>
   - [2.4](#pull-request--destination) **Pull Requests: Destination**: You should always create PR with functionality/bugfix to the workspace branch. If the funcitonality is not ready yet, then create feature branch and create PR to it, so there will be less code to checking.
