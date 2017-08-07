@@ -146,7 +146,8 @@
     ```
     git add files-to-add
     git commit -m "new message"
-    git rebase HEAD~2 -i (instead of pick in the second commit, write f and save)
+    git rebase HEAD~2 -i
+    // Now in the editor that is open, instead of pick in the second commit, write f and save it
     git push -f
     ```
 
