@@ -121,14 +121,14 @@
     ```
     git reset --soft HEAD~1
     git commit -m "new message"
-    git push -f
+    git push --force-with-lease
     ```
 
     you can also use git ammend which will perform exactly the same operations with one line of code:
 
     ```
     git commit -m --amend "new message"
-    git push -f
+    git push --force-with-lease
     ```
 
   <a name="update-pull-request--strategy"></a><a name="3.2"></a>
@@ -138,7 +138,7 @@
     git reset --soft HEAD~1
     git add files-to-add
     git commit -m "same or updated message"
-    git push -f
+    git push --force-with-lease
     ```
 
     you can also use git rebase which will perform exactly the same operations:
@@ -148,7 +148,7 @@
     git commit -m "new message"
     git rebase HEAD~2 -i
     // Now in the editor that is open, instead of pick in the second commit, write f and save it
-    git push -f
+    git push --force-with-lease
     ```
 
 **[⬆ back to top](#table-of-contents)**
