@@ -185,7 +185,7 @@
   <a name="pull-changes--rebase"></a><a name="5.1"></a>
   - [5.1](#pull-changes--rebase) **Pull changes from the server: Rebase**:
 
-  Always use rebase flag when you want to pull changes from the remove branch. All PRs with merge commits will be declined.
+  Always use rebase flag when you want to pull changes from the remote branch. All PRs with merge commits will be declined.
 
   `git pull origin development --rebase`
 
