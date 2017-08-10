@@ -29,7 +29,7 @@
 
     **type:**
     + **bugfix:** when you are fixing bug
-    + **FEATURE:** when you are implementing a whole user story
+    + **FEATURE:** when you are implementing a whole user story, which is divided to subtasks
     + **feature:** when you are implementing a feature/part of the user story
     + **hotfix:** when you are fixing bug on production/staging
 
